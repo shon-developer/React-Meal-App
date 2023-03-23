@@ -4,7 +4,7 @@ import Homepage from "./Components/Homepage";
 import Categories from "./Components/Categories";
 import RandomMeal from "./Components/RandomMeal";
 import {
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   Outlet,
   Route,
@@ -22,7 +22,7 @@ const Layout = () => {
   );
 };
 function App() {
-  const router = createBrowserRouter(
+  const router = createHashRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
         <Route index element={<Homepage />}></Route>
