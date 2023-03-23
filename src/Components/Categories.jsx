@@ -10,7 +10,7 @@ const Categories = () => {
   }, [fetchCategories]);
 
   return (
-    <div className="max-w-6xl mx-auto h-[90vh] flex justify-center items-center gap-6 flex-wrap py-6">
+    <div className="max-w-6xl mx-auto h-full flex justify-center items-center gap-6 flex-wrap py-6">
       {categories.map((item) => {
         return (
           <div key={item.idCategory}>

@@ -6,6 +6,12 @@ module.exports = {
       roboto: "Roboto",
       poppins: "Poppins",
     },
+    screens: {
+      sm: "375px",
+      md: "412px",
+      lg: "667px",
+      xl: "768px",
+    },
   },
   plugins: [],
 };

@@ -26,7 +26,7 @@ const Homepage = () => {
     <div className="w-full min-h-[100vh] h-auto bg-[#111111] py-16">
       <div className="max-w-6xl mx-auto flex flex-col justify-center items-center gap-8">
         <div className="w-full flex flex-col justify-center items-center">
-          <h1 className="text-7xl font-semibold font-roboto pb-4 tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-700">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold font-roboto pb-4 tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-700">
             Search For Your Meal
           </h1>
           <p className="font-poppins  text-md text-gray-400 tracking-wide py-2">
