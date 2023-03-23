@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import NavBar from "./Components/NavBar";
+import Footer from "./Components/Footer";
+import Homepage from "./Components/Homepage";
+import Categories from "./Components/Categories";
+import RandomMeal from "./Components/RandomMeal";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Outlet,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 
-function App() {
+const Layout = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar />
+
+      <Outlet />
+      <Footer />
+    </div>
+  );
+};
+function App() {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Homepage />}></Route>
+        <Route path="/categories" element={<Categories />}></Route>
+        <Route path="/random" element={<RandomMeal />}></Route>
+      </Route>
+    )
+  );
+  return (
+    <div className="w-full h-full text-white bg-[#111111]">
+      <div className="max-w-full mx-auto">
+        <RouterProvider router={router}></RouterProvider>
+      </div>
     </div>
   );
 }
