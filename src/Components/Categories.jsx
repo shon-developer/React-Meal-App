@@ -10,7 +10,7 @@ const Categories = () => {
   }, [fetchCategories]);
 
   return (
-    <div className="max-w-6xl mx-auto h-full flex justify-center items-center gap-6 flex-wrap py-6">
+    <div className="max-w-6xl mx-auto h-full flex justify-center items-center gap-10 flex-wrap py-6">
       {categories.map((item) => {
         return (
           <div key={item.idCategory}>
@@ -19,7 +19,7 @@ const Categories = () => {
               src={item.strCategoryThumb}
               alt={item.strCategory}
             />
-            <h4>{item.Category}</h4>
+            <h4 className="text-center">{item.strCategory}</h4>
           </div>
         );
       })}
