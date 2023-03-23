@@ -1,6 +1,6 @@
 {
   "name": "react-meal-app",
-  "homepage": "http://shon-developer.github.io/React-Meal-App",
+  "homepage": "https://shon-developer.github.io/React-Meal-App",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,10 +16,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
     "predeploy": "npm run build",
-    "build": "react-scripts build",
     "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
